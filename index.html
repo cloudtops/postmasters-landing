@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Postmaster&rsquo;s Landing — Offered at $15,000,000 | Val Burmester, Sotheby's International Realty</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Archivo+Expanded:wght@500;600;700&family=Libre+Caslon+Display&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal:#152f34;
+    --teal-2:#1b3a40;
+    --deep:#0b1c1f;
+    --paper:#e3dcc2;
+    --paper-2:#d8cfb0;
+    --tan:#a6996f;
+    --brick:#9a3b2b;
+    --brick-2:#b8492f;
+    --slate:#5c6b62;
+    --line-l:rgba(11,28,31,0.16);
+    --line-d:rgba(227,220,194,0.16);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--paper); color:var(--deep); font-family:'Archivo',sans-serif; font-weight:400;}
+  @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;} *{animation-duration:.01ms !important; transition-duration:.01ms !important;}}
+  ::selection{background:var(--brick); color:var(--paper);}
+
+  h1,h2,h3{font-family:'Libre Caslon Display',serif; font-weight:400; letter-spacing:-0.005em; line-height:1.08;}
+  .label{font-family:'Archivo Expanded',sans-serif; font-size:0.68rem; text-transform:uppercase; letter-spacing:0.1em; font-weight:600; color:var(--tan);}
+  a{color:inherit; text-decoration:none;}
+  .wrap{max-width:1240px; margin:0 auto; padding:0 56px;}
+  @media (max-width:760px){.wrap{padding:0 24px;}}
+  section{position:relative;}
+
+  .grid-tex{
+    background-image:
+      repeating-linear-gradient(0deg, rgba(227,220,194,0.06) 0 1px, transparent 1px 68px),
+      repeating-linear-gradient(90deg, rgba(227,220,194,0.06) 0 1px, transparent 1px 68px);
+  }
+
+  /* ---------- FPO placeholder-image convention ---------- */
+  .fpo{position:relative; background:var(--teal-2); overflow:hidden;}
+  .fpo .crop{position:absolute; width:14px; height:14px; opacity:0.5;}
+  .fpo .crop::before,.fpo .crop::after{content:''; position:absolute; background:var(--paper-2);}
+  .fpo .crop::before{width:14px; height:1px; top:0; left:0;}
+  .fpo .crop::after{width:1px; height:14px; top:0; left:0;}
+  .fpo .crop.tl{top:12px; left:12px;}
+  .fpo .crop.tr{top:12px; right:12px; transform:scaleX(-1);}
+  .fpo .crop.bl{bottom:12px; left:12px; transform:scaleY(-1);}
+  .fpo .crop.br{bottom:12px; right:12px; transform:scale(-1,-1);}
+  .fpo-tag{
+    position:absolute; bottom:12px; left:30px; z-index:2;
+    font-family:'Archivo Expanded',sans-serif; font-size:0.58rem; letter-spacing:0.06em;
+    color:var(--paper-2); opacity:0.5; text-transform:uppercase;
+  }
+
+  /* ---------- NAV ---------- */
+  nav{
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:28px 56px; color:var(--paper);
+    transition:background .4s ease, padding .4s ease, border-color .4s ease;
+    border-bottom:1px solid transparent;
+  }
+  nav.scrolled{background:rgba(11,28,31,0.94); backdrop-filter:blur(8px); padding:18px 56px; border-bottom-color:var(--line-d);}
+  @media (max-width:760px){nav, nav.scrolled{padding:18px 24px;}}
+  .nav-mark{font-family:'Libre Caslon Display',serif; font-size:1.1rem;}
+  .nav-links{display:flex; gap:34px; align-items:center;}
+  .nav-links a{font-family:'Archivo Expanded',sans-serif; font-size:0.66rem; text-transform:uppercase; letter-spacing:0.09em; opacity:0.85; font-weight:600;}
+  .nav-links a:hover{opacity:1;}
+  .nav-links .cta{border:1px solid rgba(227,220,194,0.4); padding:9px 18px;}
+  .nav-links .cta:hover{background:var(--brick); border-color:var(--brick); color:var(--paper);}
+  @media (max-width:880px){.nav-links a:not(.cta){display:none;}}
+
+  /* ---------- HERO ---------- */
+  .hero{height:100svh; min-height:640px; display:flex; flex-direction:column; justify-content:flex-end; color:var(--paper); background:var(--teal);}
+  .hero-content{position:relative; z-index:2; padding:0 56px 88px;}
+  @media (max-width:760px){.hero-content{padding:0 24px 60px;}}
+  .hero .label{margin-bottom:24px; color:var(--tan);}
+  .hero h1{font-size:clamp(2.5rem, 5.6vw, 5rem); max-width:17ch; font-weight:400;}
+  .hero-sub{
+    margin-top:32px; display:flex; align-items:flex-end; gap:52px; flex-wrap:wrap;
+    padding-top:26px; border-top:1px solid var(--line-d);
+  }
+  .hero-price{font-family:'Libre Caslon Display',serif; font-size:1.3rem;}
+  .hero-loc{font-size:0.86rem; opacity:0.7; max-width:38ch; line-height:1.7;}
+  .compass{position:absolute; top:100px; right:56px; width:64px; height:64px; opacity:0.55; z-index:2;}
+  @media (max-width:760px){.compass{display:none;}}
+
+  /* ---------- REVEAL ---------- */
+  .reveal{opacity:0; transform:translateY(18px); transition:opacity .8s ease, transform .8s ease;}
+  .reveal.in{opacity:1; transform:translateY(0);}
+
+  /* ---------- INTRO ---------- */
+  .intro{padding:0; background:var(--paper);}
+  .intro-top{display:flex; justify-content:space-between; align-items:center; padding:54px 0; border-bottom:1px solid var(--line-l);}
+  .stamp{
+    display:inline-flex; align-items:center; gap:8px;
+    border:1.5px solid var(--brick); color:var(--brick); padding:7px 14px;
+    transform:rotate(-1.6deg); font-family:'Archivo Expanded',sans-serif;
+    font-size:0.62rem; letter-spacing:0.09em; text-transform:uppercase; font-weight:700;
+  }
+  .intro-statement{padding:100px 0 120px;}
+  .intro-statement h2{font-size:clamp(1.9rem,4vw,3.1rem); max-width:22ch; line-height:1.24; font-weight:400;}
+  .intro-body{margin-top:56px; display:grid; grid-template-columns:repeat(3,1fr); gap:44px;}
+  .intro-body p{font-size:0.98rem; line-height:1.85; color:#26241a;}
+  .intro-body .n{font-family:'Archivo Expanded',sans-serif; font-size:0.66rem; color:var(--tan); letter-spacing:0.08em; display:block; margin-bottom:12px;}
+  @media (max-width:860px){.intro-body{grid-template-columns:1fr; gap:30px;} .intro-statement{padding:70px 0 80px;}}
+
+  /* ---------- CONTACT SHEET (gallery) ---------- */
+  .gallery{background:var(--deep); padding:110px 0 120px;}
+  .gallery-head{display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:48px; flex-wrap:wrap; gap:20px;}
+  .gallery-head h2{color:var(--paper); font-size:clamp(1.7rem,3vw,2.3rem); font-weight:400;}
+  .gallery-head .note{font-size:0.82rem; color:var(--slate); max-width:32ch; line-height:1.7;}
+  .sprockets{height:7px; background-image:repeating-linear-gradient(90deg, var(--paper-2) 0 7px, transparent 7px 24px); opacity:0.28;}
+  .filmstrip{display:flex; gap:2px; overflow-x:auto; scroll-snap-type:x mandatory; background:#000; padding:0;}
+  .filmstrip::-webkit-scrollbar{height:6px;}
+  .filmstrip::-webkit-scrollbar-thumb{background:rgba(227,220,194,0.25);}
+  .frame{flex:0 0 auto; width:min(78vw, 400px); scroll-snap-align:start; border-right:1px solid rgba(227,220,194,0.1);}
+  .frame-img{aspect-ratio:3/2;}
+  .frame-foot{display:flex; justify-content:space-between; align-items:baseline; padding:14px 4px; color:var(--paper-2);}
+  .frame-foot .fid{font-family:'Archivo Expanded',sans-serif; font-size:0.66rem; letter-spacing:0.06em; color:var(--tan);}
+  .frame-foot .fname{font-family:'Libre Caslon Display',serif; font-size:0.96rem;}
+
+  /* ---------- SPECS as chart legend ---------- */
+  .specs{background:var(--paper); padding:120px 0;}
+  .specs-head{display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:16px; flex-wrap:wrap; gap:16px;}
+  .specs-head h2{font-size:clamp(1.7rem,3vw,2.3rem); font-weight:400;}
+  .specs-head .label{color:var(--slate);}
+  .legend{border-top:1px solid var(--line-l);}
+  .leg-row{display:flex; align-items:baseline; gap:14px; padding:19px 0; border-bottom:1px solid var(--line-l);}
+  .leg-row .label{white-space:nowrap; color:var(--slate);}
+  .leg-row .dots{flex:1; border-bottom:1px dotted var(--tan); transform:translateY(-4px); opacity:0.7;}
+  .leg-row .val{font-family:'Libre Caslon Display',serif; font-size:1.15rem; white-space:nowrap;}
+  .leg-row .val.hi{color:var(--brick);}
+
+  /* ---------- ISLAND ---------- */
+  .island{background:var(--teal); color:var(--paper); padding:130px 0;}
+  .island-grid{display:grid; grid-template-columns:1.1fr 0.7fr; gap:76px; align-items:start;}
+  @media (max-width:860px){.island-grid{grid-template-columns:1fr; gap:44px;} .island{padding:90px 0;}}
+  .island h2{font-size:clamp(1.8rem,3.2vw,2.4rem); margin-bottom:24px; font-weight:400;}
+  .island p{font-size:0.98rem; line-height:1.95; color:rgba(227,220,194,0.78); margin-bottom:18px; max-width:58ch;}
+  .island-facts{display:grid; grid-template-columns:1fr 1fr; gap:22px 34px; margin-top:34px;}
+  .island-facts .label{margin-bottom:6px;}
+  .island-facts .val{font-family:'Libre Caslon Display',serif; font-size:1.05rem;}
+  .plan{border:1px solid var(--line-d); padding:24px; aspect-ratio:1/1.02; display:flex; flex-direction:column; justify-content:space-between;}
+  .plan-top{display:flex; justify-content:space-between; font-family:'Archivo Expanded',sans-serif; font-size:0.6rem; color:var(--tan); letter-spacing:0.08em;}
+  .plan-center{flex:1; display:flex; align-items:center; justify-content:center;}
+  .plan-center svg{width:96px; height:96px;}
+  .plan-bottom{font-family:'Archivo Expanded',sans-serif; font-size:0.6rem; color:var(--tan); letter-spacing:0.05em; line-height:1.9;}
+
+  /* ---------- INQUIRE ---------- */
+  .inquire{background:var(--deep); color:var(--paper); padding:140px 0 100px;}
+  .inquire-grid{display:grid; grid-template-columns:1fr 1fr; gap:86px;}
+  @media (max-width:900px){.inquire-grid{grid-template-columns:1fr; gap:50px;} .inquire{padding:100px 0 70px;}}
+  .inquire h2{font-size:clamp(1.9rem,3.3vw,2.5rem); max-width:14ch; margin-bottom:22px; font-weight:400;}
+  .inquire p.lead{color:var(--paper-2); line-height:1.85; max-width:42ch; margin-bottom:46px; font-size:0.98rem;}
+  .agent-card{border:1px solid var(--line-d); padding:26px 28px; max-width:400px;}
+  .agent-card .label{margin-bottom:14px;}
+  .agent-name{font-family:'Libre Caslon Display',serif; font-size:1.25rem;}
+  .agent-firm{font-size:0.85rem; color:var(--paper-2); margin-top:5px;}
+  .agent-contact{margin-top:16px; display:flex; flex-direction:column; gap:6px; font-size:0.85rem; color:var(--paper-2);}
+
+  form{display:flex; flex-direction:column; gap:18px;}
+  .field{display:flex; flex-direction:column; gap:8px;}
+  .field label{font-family:'Archivo Expanded',sans-serif; font-size:0.64rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--tan); font-weight:600;}
+  .field input, .field textarea{
+    background:transparent; border:none; border-bottom:1px solid var(--line-d);
+    color:var(--paper); font-family:'Archivo',sans-serif; font-size:0.96rem; padding:10px 2px;
+    transition:border-color .2s ease;
+  }
+  .field input:focus, .field textarea:focus{outline:none; border-bottom-color:var(--brick-2);}
+  .field textarea{resize:vertical; min-height:66px;}
+  .row2{display:grid; grid-template-columns:1fr 1fr; gap:18px;}
+  @media (max-width:520px){.row2{grid-template-columns:1fr;}}
+  .submit-btn{
+    margin-top:10px; align-self:flex-start; background:var(--brick); color:var(--paper); border:none;
+    padding:15px 32px; font-family:'Archivo Expanded',sans-serif; font-size:0.7rem; text-transform:uppercase;
+    letter-spacing:0.08em; font-weight:600; cursor:pointer; transition:background .25s ease;
+  }
+  .submit-btn:hover{background:var(--brick-2);}
+  .form-note{font-size:0.76rem; color:var(--slate); margin-top:14px; line-height:1.6;}
+  .success-msg{display:none; padding:26px 28px; border:1px solid rgba(154,59,43,0.5); font-family:'Libre Caslon Display',serif; font-size:1.05rem;}
+  .success-msg.show{display:block;}
+
+  footer{background:#070f11; color:var(--slate); padding:40px 0;}
+  .footer-row{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; font-family:'Archivo Expanded',sans-serif; font-size:0.62rem; letter-spacing:0.05em; text-transform:uppercase;}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="nav-mark">Postmaster&rsquo;s Landing</div>
+  <div class="nav-links">
+    <a href="#intro">The Estate</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#specs">Details</a>
+    <a href="#island">Fox Island</a>
+    <a href="#inquire" class="cta">Inquire</a>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<section class="hero fpo grid-tex">
+  <span class="crop tl"></span><span class="crop tr"></span><span class="crop bl"></span><span class="crop br"></span>
+  <span class="fpo-tag">FPO — hero photography pending · 2400 × 1500</span>
+  <svg class="compass" viewBox="0 0 100 100" fill="none" stroke="#e3dcc2" stroke-width="1">
+    <circle cx="50" cy="50" r="46"/>
+    <circle cx="50" cy="50" r="2" fill="#b8492f" stroke="none"/>
+    <path d="M50 6 L54 46 L50 50 L46 46 Z" fill="#e3dcc2" stroke="none" opacity="0.9"/>
+    <line x1="50" y1="58" x2="50" y2="94"/>
+    <line x1="6" y1="50" x2="42" y2="50"/>
+    <line x1="58" y1="50" x2="94" y2="50"/>
+    <text x="50" y="20" fill="#e3dcc2" font-family="Archivo Expanded" font-size="7" text-anchor="middle">N</text>
+  </svg>
+  <div class="hero-content">
+    <div class="label reveal">Fox Island, Washington — Puget Sound</div>
+    <h1 class="reveal">A shoreline held to itself.</h1>
+    <div class="hero-sub reveal">
+      <div class="hero-price">$15,000,000</div>
+      <div class="hero-loc">[Placeholder address] · 000 ft of low-bank Puget Sound waterfront, offered exclusively through Val Burmester, Sotheby&rsquo;s International Realty — Kirkland</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= INTRO ================= -->
+<section class="intro" id="intro">
+  <div class="wrap intro-top">
+    <div class="label">The Estate</div>
+    <div class="stamp reveal">Draft — pending final copy</div>
+  </div>
+  <div class="wrap intro-statement">
+    <h2 class="reveal">Set on a private bluff, the residence looks west across the Sound toward the Olympics.</h2>
+    <div class="intro-body">
+      <div class="reveal"><span class="n">01</span><p>[Placeholder] Old-growth fir stands at the property line and the light changes by the hour — this stretch of shoreline is among the last of its kind to reach the Fox Island market.</p></div>
+      <div class="reveal"><span class="n">02</span><p>[Placeholder] Stand-in for the estate's real narrative — architecture, builder, year of construction, the sense of arrival at the gate. Replace with copy from Val's listing notes.</p></div>
+      <div class="reveal"><span class="n">03</span><p>[Placeholder] A closing line on scarcity and provenance — why this address, on this island, will not repeat itself.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GALLERY / CONTACT SHEET ================= -->
+<section class="gallery" id="gallery">
+  <div class="wrap gallery-head reveal">
+    <h2>Contact Sheet</h2>
+    <div class="note">Frames hold their intended crop and sequence. Final photography replaces each still ahead of launch.</div>
+  </div>
+  <div class="sprockets"></div>
+  <div class="filmstrip reveal">
+    <div class="frame">
+      <div class="frame-img fpo"><span class="crop tl"></span><span class="crop tr"></span><span class="crop bl"></span><span class="crop br"></span><span class="fpo-tag">FPO 3:2</span></div>
+      <div class="frame-foot wrap" style="padding-left:14px;padding-right:14px;"><span class="fid">PML–01</span><span class="fname">West elevation</span></div>
+    </div>
+    <div class="frame">
+      <div class="frame-img fpo"><span class="crop tl"></span><span class="crop tr"></span><span class="crop bl"></span><span class="crop br"></span><span class="fpo-tag">FPO 3:2</span></div>
+      <div class="frame-foot wrap" style="padding-left:14px;padding-right:14px;"><span class="fid">PML–02</span><span class="fname">Grounds &amp; tree line</span></div>
+    </div>
+    <div class="frame">
+      <div class="frame-img fpo"><span class="crop tl"></span><span class="crop tr"></span><span class="crop bl"></span><span class="crop br"></span><span class="fpo-tag">FPO 3:2</span></div>
+      <div class="frame-foot wrap" style="padding-left:14px;padding-right:14px;"><span class="fid">PML–03</span><span class="fname">Great room</span></div>
+    </div>
+    <div class="frame">
+      <div class="frame-img fpo"><span class="crop tl"></span><span class="crop tr"></span><span class="crop bl"></span><span class="crop br"></span><span class="fpo-tag">FPO 3:2</span></div>
+      <div class="frame-foot wrap" style="padding-left:14px;padding-right:14px;"><span class="fid">PML–04</span><span class="fname">Dock &amp; moorage</span></div>
+    </div>
+    <div class="frame">
+      <div class="frame-img fpo"><span class="crop tl"></span><span class="crop tr"></span><span class="crop bl"></span><span class="crop br"></span><span class="fpo-tag">FPO 3:2</span></div>
+      <div class="frame-foot wrap" style="padding-left:14px;padding-right:14px;"><span class="fid">PML–05</span><span class="fname">Materials &amp; finish</span></div>
+    </div>
+  </div>
+  <div class="sprockets"></div>
+</section>
+
+<!-- ================= SPECS ================= -->
+<section class="specs" id="specs">
+  <div class="wrap">
+    <div class="specs-head reveal">
+      <h2>Property Survey</h2>
+      <div class="label">Parcel [placeholder] — Pierce Co., WA</div>
+    </div>
+    <div class="legend reveal">
+      <div class="leg-row"><span class="label">Waterfront</span><span class="dots"></span><span class="val">000 ft</span></div>
+      <div class="leg-row"><span class="label">Site area</span><span class="dots"></span><span class="val">0.00 ac</span></div>
+      <div class="leg-row"><span class="label">Residence</span><span class="dots"></span><span class="val">0,000 sf</span></div>
+      <div class="leg-row"><span class="label">Bed / bath</span><span class="dots"></span><span class="val">0 / 0</span></div>
+      <div class="leg-row"><span class="label">Year built</span><span class="dots"></span><span class="val">0000</span></div>
+      <div class="leg-row"><span class="label">Moorage</span><span class="dots"></span><span class="val">Private dock</span></div>
+      <div class="leg-row"><span class="label">Garage</span><span class="dots"></span><span class="val">0 car</span></div>
+      <div class="leg-row"><span class="label">Offered at</span><span class="dots"></span><span class="val hi">$15,000,000</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ISLAND ================= -->
+<section class="island grid-tex" id="island">
+  <div class="wrap island-grid">
+    <div class="reveal">
+      <h2>Fox Island</h2>
+      <p>[Placeholder] Reached by a 1954 suspension bridge from the Gig Harbor peninsula, Fox Island sits apart from the pace of the mainland — a few thousand acres of fir forest and rocky shoreline in southern Puget Sound.</p>
+      <p>[Placeholder] Seattle and Tacoma are close enough for a morning meeting, far enough that the island keeps its own weather, its own light, and a shoreline that still feels undiscovered.</p>
+      <div class="island-facts">
+        <div><div class="label">To Tacoma</div><div class="val">~25 min</div></div>
+        <div><div class="label">To Seattle</div><div class="val">~55 min</div></div>
+        <div><div class="label">Access</div><div class="val">Fox Island Bridge</div></div>
+        <div><div class="label">County</div><div class="val">Pierce, WA</div></div>
+      </div>
+    </div>
+    <div class="reveal plan">
+      <div class="plan-top"><span>Site Plan</span><span>N ↑</span></div>
+      <div class="plan-center">
+        <svg viewBox="0 0 100 100" fill="none" stroke="#e3dcc2" stroke-width="0.8" opacity="0.85">
+          <circle cx="50" cy="50" r="2" fill="#b8492f" stroke="none"/>
+          <circle cx="50" cy="50" r="20"/>
+          <circle cx="50" cy="50" r="38"/>
+          <line x1="50" y1="4" x2="50" y2="16"/>
+          <line x1="50" y1="84" x2="50" y2="96"/>
+          <line x1="4" y1="50" x2="16" y2="50"/>
+          <line x1="84" y1="50" x2="96" y2="50"/>
+        </svg>
+      </div>
+      <div class="plan-bottom">LAT [placeholder]<br>LON [placeholder]<br>PARCEL [placeholder]</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= INQUIRE ================= -->
+<section class="inquire" id="inquire">
+  <div class="wrap inquire-grid">
+    <div class="reveal">
+      <h2>Request a private showing.</h2>
+      <p class="lead">Postmaster&rsquo;s Landing is offered exclusively through Val Burmester. Serious inquiries receive a response within one business day.</p>
+      <div class="agent-card">
+        <div class="label">Listing Agent</div>
+        <div class="agent-name">Val Burmester</div>
+        <div class="agent-firm">Sotheby&rsquo;s International Realty — Kirkland</div>
+        <div class="agent-contact">
+          <span>[Placeholder phone]</span>
+          <span>[Placeholder email]</span>
+        </div>
+      </div>
+    </div>
+    <div class="reveal">
+      <form id="inquireForm">
+        <div class="row2">
+          <div class="field"><label for="fname">Name</label><input id="fname" name="name" type="text" required></div>
+          <div class="field"><label for="fphone">Phone</label><input id="fphone" name="phone" type="tel"></div>
+        </div>
+        <div class="field"><label for="femail">Email</label><input id="femail" name="email" type="email" required></div>
+        <div class="field"><label for="fmsg">Message</label><textarea id="fmsg" name="message" placeholder="I'd like to schedule a private showing of Postmaster&rsquo;s Landing..."></textarea></div>
+        <button type="submit" class="submit-btn">Submit Inquiry</button>
+        <div class="form-note">Front-end placeholder — no submissions are sent yet. Connect to Val's CRM or a mail service before launch.</div>
+      </form>
+      <div class="success-msg" id="successMsg">Thank you — your inquiry has been noted. Val's team will follow up shortly.</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-row">
+    <span>© 2026 Postmaster&rsquo;s Landing — Placeholder Listing Page</span>
+    <span>Sotheby&rsquo;s International Realty, Kirkland — Equal Housing Opportunity</span>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 40); });
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  const form = document.getElementById('inquireForm');
+  const success = document.getElementById('successMsg');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    form.style.display = 'none';
+    success.classList.add('show');
+  });
+</script>
+
+</body>
+</html>
