@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hope Landing — Offered at $10,000,000 | Val Burmester, Sotheby's International Realty</title>
-<meta name="description" content="Hope Landing — 19+ acres of low-bank Puget Sound waterfront on Fox Island, Washington, with approved builder plans in place. Offered at $10,000,000 through Val Burmester, Sotheby's International Realty, Kirkland.">
+<meta name="description" content="Hope Landing — 19+ acres on Fox Island, offered for only the second time since 1889. Waterfront on Cedrona Cove, a permit-ready 6,200 sf residence, and a historic 1915 post office. Offered at $10,000,000 through Val Burmester, Sotheby's International Realty, Kirkland.">
 
 <!-- Favicon -->
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -15,11 +15,11 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://fox-island-site.vercel.app/">
 <meta property="og:title" content="Hope Landing — Offered at $10,000,000">
-<meta property="og:description" content="19+ acres of low-bank Puget Sound waterfront on Fox Island, Washington, with approved builder plans in place. Offered through Val Burmester, Sotheby's International Realty, Kirkland.">
+<meta property="og:description" content="19+ acres on Fox Island, offered for only the second time since 1889 — waterfront on Cedrona Cove, a permit-ready 6,200 sf residence, and a historic 1915 post office. Offered through Val Burmester, Sotheby's International Realty, Kirkland.">
 <meta property="og:image" content="https://fox-island-site.vercel.app/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Hope Landing — Offered at $10,000,000">
-<meta name="twitter:description" content="19+ acres of low-bank Puget Sound waterfront on Fox Island, Washington, with approved builder plans in place. Offered through Val Burmester, Sotheby's International Realty, Kirkland.">
+<meta name="twitter:description" content="19+ acres on Fox Island, offered for only the second time since 1889 — waterfront on Cedrona Cove, a permit-ready 6,200 sf residence, and a historic 1915 post office. Offered through Val Burmester, Sotheby's International Realty, Kirkland.">
 <meta name="twitter:image" content="https://fox-island-site.vercel.app/og-image.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -84,7 +84,7 @@
   }
   nav.scrolled{background:rgba(10,10,10,0.94); backdrop-filter:blur(8px); padding:18px 56px; border-bottom-color:var(--line-d);}
   @media (max-width:760px){nav, nav.scrolled{padding:18px 24px;}}
-  .nav-mark{font-family:'Libre Caslon Display',serif; font-size:1rem; text-transform:uppercase; letter-spacing:0.16em; font-weight:400;}
+  .nav-mark{font-family:'Libre Caslon Display',serif; font-size:1.3rem; text-transform:uppercase; letter-spacing:0.16em; font-weight:400;}
   .nav-links{display:flex; gap:34px; align-items:center;}
   .nav-links a{font-family:'Libre Caslon Display',serif; font-size:0.94rem; font-style:italic; font-weight:400; opacity:0.8; padding-bottom:2px; border-bottom:1px solid transparent;}
   .nav-links a:hover{opacity:1; border-bottom-color:currentColor;}
@@ -114,6 +114,7 @@
   }
   .hero-price{font-family:'Libre Caslon Display',serif; font-size:1.3rem;}
   .hero-loc{font-size:0.86rem; opacity:0.7; max-width:38ch; line-height:1.7;}
+  .hero-since{font-family:'Libre Caslon Display',serif; font-style:italic; font-size:1.02rem; color:var(--tan); margin-top:18px;}
   .compass{position:absolute; top:100px; right:56px; width:64px; height:64px; opacity:0.55; z-index:2;}
   @media (max-width:760px){.compass{display:none;}}
 
@@ -132,9 +133,10 @@
   }
   .intro-statement{padding:100px 0 120px;}
   .intro-statement h2{font-size:clamp(1.9rem,4vw,3.1rem); max-width:22ch; line-height:1.24; font-weight:400;}
-  .intro-body{margin-top:56px; display:grid; grid-template-columns:repeat(3,1fr); gap:44px;}
-  .intro-body p{font-size:0.98rem; line-height:1.85; color:#1c1c1c;}
-  @media (max-width:860px){.intro-body{grid-template-columns:1fr; gap:30px;} .intro-statement{padding:70px 0 80px;}}
+  .chapters{margin-top:56px; display:grid; grid-template-columns:repeat(2,1fr); gap:50px 60px;}
+  .chapter h3{font-family:'Libre Caslon Display',serif; font-style:italic; font-size:1.2rem; font-weight:400; margin-bottom:14px; color:var(--brick);}
+  .chapter p{font-size:0.98rem; line-height:1.85; color:#1c1c1c;}
+  @media (max-width:860px){.chapters{grid-template-columns:1fr; gap:34px;} .intro-statement{padding:70px 0 80px;}}
 
   /* ---------- CONTACT SHEET (gallery) ---------- */
   .gallery{background:var(--deep); padding:110px 0 120px;}
@@ -163,6 +165,7 @@
   .leg-row .dots{flex:1; border-bottom:1px dotted var(--tan); transform:translateY(-4px); opacity:0.7;}
   .leg-row .val{font-family:'Libre Caslon Display',serif; font-size:1.15rem; white-space:nowrap;}
   .leg-row .val.hi{font-weight:600; text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:5px;}
+  .ledger-note{margin-top:22px; font-size:0.82rem; color:var(--slate); font-style:italic;}
 
   /* ---------- ISLAND ---------- */
   .island{background:var(--teal); color:var(--paper); padding:130px 0;}
@@ -248,10 +251,11 @@
   </svg>
   <div class="hero-content">
     <div class="label reveal">Fox Island, Washington — Puget Sound</div>
-    <h1 class="reveal">Nineteen acres on Puget Sound.</h1>
+    <h1 class="reveal">Once a landing for letters. Now a landing for legacy.</h1>
+    <div class="hero-since reveal">Offered for only the second time in 137 years — available once since 1889</div>
     <div class="hero-sub reveal">
       <div class="hero-price">$10,000,000</div>
-      <div class="hero-loc">1157 12th Ave, Fox Island, WA · ~130 ft of low-bank waterfront on 19+ acres, offered exclusively through Val Burmester, Sotheby&rsquo;s International Realty — Kirkland</div>
+      <div class="hero-loc">1157 12th Ave, Fox Island, WA · 130 ft of low-bank waterfront on Cedrona Cove, offered exclusively through Val Burmester, Sotheby&rsquo;s International Realty — Kirkland</div>
     </div>
   </div>
   <div class="hero-disclosure">Artist's rendering of the approved concept — property is currently vacant land</div>
@@ -264,11 +268,24 @@
     <div class="stamp reveal">Renderings pending — property is vacant land</div>
   </div>
   <div class="wrap intro-statement">
-    <h2 class="reveal">Nineteen acres of Fox Island shoreline, with the architectural vision already approved.</h2>
-    <div class="intro-body">
-      <div class="reveal"><p>Just over 19 acres with approximately 130 ft of low-bank shoreline, facing views of Gig Harbor and the Tacoma Narrows Bridge — a rare amount of unbroken waterfront acreage for Fox Island.</p></div>
-      <div class="reveal"><p>Approved builder plans are in place for a custom 6,000+ sq ft residence with a pool and outbuildings, with building permits renewed through June 2027 — ready for a buyer to break ground.</p></div>
-      <div class="reveal"><p>A combination of scale, shoreline, and permit-ready plans that rarely reaches the market on Fox Island.</p></div>
+    <h2 class="reveal">A canvas where nineteenth-century history meets contemporary vision.</h2>
+    <div class="chapters">
+      <div class="chapter reveal">
+        <h3>The Residence</h3>
+        <p>Set high above the water to command uninterrupted views of Puget Sound and the Narrows Bridge beyond, the ready-to-build 6,200 sq ft primary residence is a study in quiet confidence — architecture that steps back so the horizon can step forward. A luxury pool and private pool house extend the living space outward, blurring the line between interior comfort and island air.</p>
+      </div>
+      <div class="chapter reveal">
+        <h3>The Collector&rsquo;s Pavilion</h3>
+        <p>A 2,500 sq ft ready-to-build detached garage — oversized pass-through doors, soaring ceilings — stands ready for a collection worthy of the setting. This is not storage. It is a gallery for the machines you love.</p>
+      </div>
+      <div class="chapter reveal">
+        <h3>The Post Office</h3>
+        <p>At the heart of the property sits a piece of American history: from 1915 to 1932, the island&rsquo;s post office, waiting to be reimagined. Boathouse. Salon. Private retreat. Its next purpose is unwritten — reserved for an owner who understands that the rarest luxury is a story no one else can tell.</p>
+      </div>
+      <div class="chapter reveal">
+        <h3>Cedrona Cove</h3>
+        <p>Below it all, low-bank access opens onto the warm, protected waters of Cedrona Cove — generations of summer afternoons, only beginning to write the next ones, with future dock and pier exploration options.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -329,13 +346,17 @@
       <div class="label">Pierce County, WA</div>
     </div>
     <div class="legend reveal">
-      <div class="leg-row"><span class="label">Waterfront</span><span class="dots"></span><span class="val">~130 ft, low-bank</span></div>
+      <div class="leg-row"><span class="label">Waterfront</span><span class="dots"></span><span class="val">130 ft, low-bank (Cedrona Cove)</span></div>
       <div class="leg-row"><span class="label">Site area</span><span class="dots"></span><span class="val">19+ ac</span></div>
-      <div class="leg-row"><span class="label">Approved residence</span><span class="dots"></span><span class="val">6,000+ sf</span></div>
-      <div class="leg-row"><span class="label">Outbuildings</span><span class="dots"></span><span class="val">Included in plans</span></div>
+      <div class="leg-row"><span class="label">Primary residence</span><span class="dots"></span><span class="val">6,200 sf, permit-ready</span></div>
+      <div class="leg-row"><span class="label">Collector&rsquo;s Pavilion</span><span class="dots"></span><span class="val">2,500 sf detached garage, permitted</span></div>
+      <div class="leg-row"><span class="label">Historic structure</span><span class="dots"></span><span class="val">Original U.S. Post Office, 1915&ndash;1932</span></div>
+      <div class="leg-row"><span class="label">Water</span><span class="dots"></span><span class="val">Private well</span></div>
+      <div class="leg-row"><span class="label">Subdivision</span><span class="dots"></span><span class="val">Platting in progress (3 parcels)</span></div>
       <div class="leg-row"><span class="label">Building permits</span><span class="dots"></span><span class="val">Valid through 6/2027</span></div>
-      <div class="leg-row"><span class="label">Offered at</span><span class="dots"></span><span class="val hi">$10,000,000</span></div>
+      <div class="leg-row"><span class="label">Offered at</span><span class="dots"></span><span class="val hi">$10,000,000*</span></div>
     </div>
+    <div class="ledger-note reveal">* Offered for only the second time in 137 years — available once since 1889.</div>
   </div>
 </section>
 
@@ -349,6 +370,8 @@
       <div class="island-facts">
         <div><div class="label">To Tacoma</div><div class="val">~25 min</div></div>
         <div><div class="label">To Seattle</div><div class="val">~55 min</div></div>
+        <div><div class="label">Narrows Airport</div><div class="val">Close proximity</div></div>
+        <div><div class="label">Shopping</div><div class="val">Metropolitan Market, Target, Costco nearby</div></div>
         <div><div class="label">Access</div><div class="val">Fox Island Bridge</div></div>
         <div><div class="label">County</div><div class="val">Pierce, WA</div></div>
       </div>
